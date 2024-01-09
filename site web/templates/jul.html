@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+    <title>Albums de JUL</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Albums de JUL</h1>
+        {{range .}}
+        <div>
+            <img src="{{.Image}}" alt="{{.Name}}">
+            <h2>{{.Name}}</h2>
+            <p>Date de sortie: {{.ReleaseDate}}</p>
+            <p>Nombre de pistes: {{.Tracks}}</p>
+        </div>
+        {{end}}
+    </div>
+</body>
+
+</html>

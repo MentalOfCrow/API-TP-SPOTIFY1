@@ -1,0 +1,22 @@
+# Fichiers binaires
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Dossiers de build
+/bin/
+/pkg/
+
+# Fichiers spécifiques à Go
+*.test
+*.prof
+
+# Fichiers temporaires
+*.tmp
+
+# Fichiers de configuration spécifiques à l'environnement
+/web/.env
+
+# Dossiers spécifiques à l'environnement
+/vendor/

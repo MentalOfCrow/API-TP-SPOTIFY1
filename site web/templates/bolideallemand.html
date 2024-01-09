@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+    <title>Bolide Allemand</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Bolide Allemand</h1>
+        <img src="{{.AlbumCover}}" alt="{{.Title}}">
+        <p>Artiste: {{.Artist}}</p>
+        <p>Album: {{.Album}}</p>
+        <p>Date de sortie: {{.ReleaseDate}}</p>
+        <p>Spotify Link: <a href="{{.SpotifyLink}}" target="_blank">Écouter sur Spotify</a></p>
+    </div>
+</body>
+
+</html>
