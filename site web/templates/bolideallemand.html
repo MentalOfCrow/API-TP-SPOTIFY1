@@ -1,22 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/static/style.css">
-    <title>Bolide Allemand</title>
+    <title>Titre de SDM</title>
+    <link rel="stylesheet" href="/static/styles.css">
 </head>
 
 <body>
-    <div class="container">
-        <h1>Bolide Allemand</h1>
-        <img src="{{.AlbumCover}}" alt="{{.Title}}">
-        <p>Artiste: {{.Artist}}</p>
-        <p>Album: {{.Album}}</p>
-        <p>Date de sortie: {{.ReleaseDate}}</p>
-        <p>Spotify Link: <a href="{{.SpotifyLink}}" target="_blank">Écouter sur Spotify</a></p>
-    </div>
+    <header>
+        <h1>Titre de votre site</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Accueil</a></li>
+                <li><a href="/album/jul">Albums de JUL</a></li>
+                <li><a href="/track/sdm">Titre de SDM</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Titre de SDM</h2>
+        <div class="card">
+            <img src="{{.AlbumCover}}" alt="{{.Title}}">
+            <p>Artiste : {{.Artist}}</p>
+            <p>Album : {{.Album}}</p>
+            <p>Date de sortie : {{.ReleaseDate}}</p>
+            <p>Spotify Link : <a href="{{.SpotifyLink}}" target="_blank">Écouter sur Spotify</a></p>
+        </div>
+        <a href="/"><h1>Retourner à la page d'accueil</h1></a>
+    </main>
+    <footer>
+        <p>&copy; 2024 Norme RGPD et Tous les droits sont réservés.</p>
+    </footer>
 </body>
 
 </html>
