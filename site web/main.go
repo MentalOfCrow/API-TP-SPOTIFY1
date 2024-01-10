@@ -1,5 +1,5 @@
 package main
-
+// track smd = fct pas
 import (
 	"encoding/base64"
 	"encoding/json"
@@ -11,13 +11,12 @@ import (
 )
 
 // Structure pour stocker le token d'accès Spotify
-type Token struct {
 	AccessToken string `json:"access_token"`
 	TokenType   string `json:"token_type"`
 	Duration    int    `json:"expires_in"`
 }
 
-// Structure pour représenter les données des albums
+// Structure pour représenter les données des albums (jul et sdm)
 type AlbumsData struct {
 	Name        string
 	Image       string
@@ -25,7 +24,7 @@ type AlbumsData struct {
 	Tracks      int
 }
 
-// Structure pour représenter les données des titres
+// Structure pour représenter les données des titres (jul et sdm)
 type TrackData struct {
 	Title       string
 	AlbumCover  string
@@ -35,7 +34,8 @@ type TrackData struct {
 	SpotifyLink string
 }
 
-// Fonction pour obtenir le token d'accès Spotify
+// Fonction pour obtenir le token d'accès Spotify (DashBoard Spotify Pour les développeurs)
+type Token struct {
 func getAccessToken() (string, error) {
 	clientID := "a64cd1f4ec7a4ff39957dc6e42f1c0e5"
 	clientSecret := "1a0108afa8974e7683f022621db9effd"
@@ -89,7 +89,7 @@ func main() {
 	fileserver := http.FileServer(http.Dir("styles"))
 	http.Handle("/static/", http.StripPrefix("/static/", fileserver))
 
-	// Gestion des routes
+	// Gestion des routes Classiques
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		temp.ExecuteTemplate(w, "index.html", nil)
 	})
@@ -179,6 +179,6 @@ func main() {
 		temp.ExecuteTemplate(w, "bolideallemand.html", trackData)
 	})
 
-	fmt.Println("Serveur lancé sur http://localhost:8080")
+	fmt.Println("Serveur lancé sur http://localhost:8080")  // Port 8080 ouvert en local
 	log.Fatal(http.ListenAndServe(":8080", nil))
 }
