@@ -1,25 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/static/style.css">
     <title>Albums de JUL</title>
+    <link rel="stylesheet" href="/static/styles.css">
 </head>
 
 <body>
-    <div class="container">
+    <header>
+        <h1>Titre de votre site</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Accueil</a></li>
+                <li><a href="/album/jul">Albums de JUL</a></li>
+                <li><a href="/track/sdm">Titre de SDM</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
         <h1>Albums de JUL</h1>
         {{range .}}
-        <div>
-            <img src="{{.Image}}" alt="{{.Name}}">
+        <div class="album-info">
             <h2>{{.Name}}</h2>
-            <p>Date de sortie: {{.ReleaseDate}}</p>
-            <p>Nombre de pistes: {{.Tracks}}</p>
+            <div><img src="{{.Image}}" alt="Album Cover" class="album-cover"></div>
+            <p><strong>Date de sortie :</strong> {{.ReleaseDate}}</p>
+            <p><strong>Nombre de pistes :</strong> {{.Tracks}}</p>
         </div>
         {{end}}
-    </div>
+        <a href="/"><h1>Retourner à la page d'accueil</h1></a>
+    </main>
+    <footer>
+        <p>&copy; 2024 Norme RGPD et Tous les droits sont réservés.</p>
+    </footer>
 </body>
 
 </html>
